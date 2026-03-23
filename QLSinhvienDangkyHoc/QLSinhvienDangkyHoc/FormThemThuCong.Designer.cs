@@ -221,6 +221,8 @@
             // 
             // txtMaLopMonHoc
             // 
+            this.txtMaLopMonHoc.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtMaLopMonHoc.ForeColor = System.Drawing.SystemColors.ScrollBar;
             this.txtMaLopMonHoc.Location = new System.Drawing.Point(39, 548);
             this.txtMaLopMonHoc.Multiline = true;
             this.txtMaLopMonHoc.Name = "txtMaLopMonHoc";

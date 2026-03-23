@@ -40,7 +40,7 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.label7 = new System.Windows.Forms.Label();
+            this.lblThongBao = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.dgvHocPhan = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
@@ -69,7 +69,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.btnTaoHocKy = new System.Windows.Forms.Button();
-            this.bntTest = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -80,13 +79,13 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.bntTest);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1581, 100);
             this.panel1.TabIndex = 0;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // label1
             // 
@@ -195,6 +194,7 @@
             // panel3
             // 
             this.panel3.Controls.Add(this.label7);
+            this.panel3.Controls.Add(this.lblThongBao);
             this.panel3.Location = new System.Drawing.Point(1260, 106);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(321, 602);
@@ -208,6 +208,15 @@
             this.label7.Size = new System.Drawing.Size(281, 20);
             this.label7.TabIndex = 20;
             this.label7.Text = "Vui lòng chọn xem thông tin để hiển thị";
+            // lblThongBao
+            // 
+            this.lblThongBao.AutoSize = true;
+            this.lblThongBao.Location = new System.Drawing.Point(28, 360);
+            this.lblThongBao.Name = "lblThongBao";
+            this.lblThongBao.Size = new System.Drawing.Size(281, 20);
+            this.lblThongBao.TabIndex = 20;
+            this.lblThongBao.Text = "Vui lòng chọn xem thông tin để hiển thị";
+            this.lblThongBao.Click += new System.EventHandler(this.label7_Click);
             // 
             // panel4
             // 
@@ -248,6 +257,10 @@
             this.dgvHocPhan.RowTemplate.Height = 28;
             this.dgvHocPhan.Size = new System.Drawing.Size(982, 277);
             this.dgvHocPhan.TabIndex = 19;
+            this.dgvHocPhan.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvHocPhan.Size = new System.Drawing.Size(982, 277);
+            this.dgvHocPhan.TabIndex = 19;
+            this.dgvHocPhan.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvHocPhan_CellClick);
             this.dgvHocPhan.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvHocPhan_CellValueChanged);
             this.dgvHocPhan.CurrentCellDirtyStateChanged += new System.EventHandler(this.dgvHocPhan_CurrentCellDirtyStateChanged);
             // 
@@ -563,8 +576,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn tiet;
         private System.Windows.Forms.DataGridViewTextBoxColumn gioihan;
         private System.Windows.Forms.DataGridViewTextBoxColumn dadangky;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label lblThongBao;
         private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Button bntTest;
     }
 }

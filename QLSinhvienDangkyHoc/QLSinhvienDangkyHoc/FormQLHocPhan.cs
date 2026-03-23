@@ -14,14 +14,23 @@ namespace QLSinhvienDangkyHoc
     public partial class FormQLHocPhan : Form
     {
         string connStr = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=QuanLyHocPhan;Integrated Security=True";
+        // Panel + TextBox chi tiết
+        Panel pnlChiTiet;
+        TextBox txtMaLop, txtTenMon, txtSoTinChi, txtThu, txtTiet, txtGioiHan, txtDaDangKy;
         public FormQLHocPhan()
         {
-            InitializeComponent();
+            InitializeComponent();   // ✔ luôn phải gọi trước
+
+            TaoPanelChiTiet();       // ✔ gọi 1 lần duy nhất
+
+            dgvHocPhan.CellClick += dgvHocPhan_CellClick;
         }
 
         private void FormQLHocPhan_Load(object sender, EventArgs e)
         {
 
+            panel3.Visible = true;      // Hiện panel "Vui lòng"
+            pnlChiTiet.Visible = false; // Ẩn panel chi tiết
         }
         public void ThemDongVaoDGV(string maLop, string tenMonHoc, string soTinChi,
                            string thu, string tiet, string gioiHan, string daDangKy)
@@ -53,6 +62,17 @@ namespace QLSinhvienDangkyHoc
         {
             KiemTraNutXoa();
         }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
         private void KiemTraNutXoa()
         {
             bool coChon = false;
@@ -121,6 +141,106 @@ namespace QLSinhvienDangkyHoc
         private void bntTest_Click(object sender, EventArgs e)
         {
             TestLoad();
+        }
+
+        private void dgvHocPhan_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex < 0) return;
+
+            DataGridViewRow row = dgvHocPhan.Rows[e.RowIndex];
+
+            // Hiện dữ liệu
+            txtMaLop.Text = row.Cells[1].Value?.ToString();
+            txtTenMon.Text = row.Cells[2].Value?.ToString();
+            txtSoTinChi.Text = row.Cells[3].Value?.ToString();
+            txtThu.Text = row.Cells[4].Value?.ToString();
+            txtTiet.Text = row.Cells[5].Value?.ToString();
+            txtGioiHan.Text = row.Cells[6].Value?.ToString();
+            txtDaDangKy.Text = row.Cells[7].Value?.ToString();
+
+            // 🔥 FIX CHÍNH
+            panel3.Visible = false;     // Ẩn panel "Vui lòng"
+            pnlChiTiet.Visible = true;  // Hiện panel chi tiết
+        }
+        private void TaoPanelChiTiet()
+        {
+            pnlChiTiet = new Panel();
+            pnlChiTiet.Width = 300;
+            pnlChiTiet.Dock = DockStyle.Right;
+            pnlChiTiet.BorderStyle = BorderStyle.FixedSingle;
+            pnlChiTiet.BackColor = Color.WhiteSmoke; // Thêm màu nền cho dễ nhìn
+
+            this.Controls.Add(pnlChiTiet);
+            this.Controls.Add(pnlChiTiet);
+            pnlChiTiet.BringToFront();   // 🔥 THÊM DÒNG NÀY
+            int currentTop = 20; // Dùng biến tạm để quản lý khoảng cách dọc
+
+            // Hàm tạo Label nhanh (Sử dụng tên đầy đủ để tránh lỗi)
+            System.Windows.Forms.Label TaoLabelNhanh(string text, int y)
+            {
+                System.Windows.Forms.Label lbl = new System.Windows.Forms.Label();
+                lbl.Text = text;
+                lbl.Left = 10;
+                lbl.Top = y;
+                lbl.Width = 100;
+                lbl.Font = new Font("Arial", 9, FontStyle.Bold);
+                return lbl;
+            }
+
+            // Hàm tạo TextBox nhanh
+            TextBox TaoTextBoxNhanh(int y)
+            {
+                TextBox txt = new TextBox();
+                txt.Left = 120;
+                txt.Top = y;
+                txt.Width = 150;
+                txt.ReadOnly = true;
+                txt.BackColor = Color.White;
+                return txt;
+            }
+
+            // --- Thêm các thành phần vào Panel ---
+
+            // 1. Mã lớp
+            pnlChiTiet.Controls.Add(TaoLabelNhanh("Mã lớp:", currentTop));
+            txtMaLop = TaoTextBoxNhanh(currentTop);
+            pnlChiTiet.Controls.Add(txtMaLop);
+
+            // 2. Tên môn
+            currentTop += 40;
+            pnlChiTiet.Controls.Add(TaoLabelNhanh("Tên môn:", currentTop));
+            txtTenMon = TaoTextBoxNhanh(currentTop);
+            pnlChiTiet.Controls.Add(txtTenMon);
+
+            // 3. Số tín chỉ
+            currentTop += 40;
+            pnlChiTiet.Controls.Add(TaoLabelNhanh("Số tín chỉ:", currentTop));
+            txtSoTinChi = TaoTextBoxNhanh(currentTop);
+            pnlChiTiet.Controls.Add(txtSoTinChi);
+
+            // 4. Thứ
+            currentTop += 40;
+            pnlChiTiet.Controls.Add(TaoLabelNhanh("Thứ:", currentTop));
+            txtThu = TaoTextBoxNhanh(currentTop);
+            pnlChiTiet.Controls.Add(txtThu);
+
+            // 5. Tiết
+            currentTop += 40;
+            pnlChiTiet.Controls.Add(TaoLabelNhanh("Tiết:", currentTop));
+            txtTiet = TaoTextBoxNhanh(currentTop);
+            pnlChiTiet.Controls.Add(txtTiet);
+
+            // 6. Giới hạn
+            currentTop += 40;
+            pnlChiTiet.Controls.Add(TaoLabelNhanh("Giới hạn:", currentTop));
+            txtGioiHan = TaoTextBoxNhanh(currentTop);
+            pnlChiTiet.Controls.Add(txtGioiHan);
+
+            // 7. Đã đăng ký
+            currentTop += 40;
+            pnlChiTiet.Controls.Add(TaoLabelNhanh("Đã đăng ký:", currentTop));
+            txtDaDangKy = TaoTextBoxNhanh(currentTop);
+            pnlChiTiet.Controls.Add(txtDaDangKy);
         }
     }
 }
