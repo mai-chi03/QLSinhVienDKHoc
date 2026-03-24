@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "D:\\MaiChi\\QLSinhVienDKHoc\\QLSinhvienDangkyHoc\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{BF9B3EA6-73DC-40CE-9A08-6DD730F661E6}|QLSinhvienDangkyHoc\\QLSinhvienDangkyHoc.csproj|D:\\MaiChi\\QLSinhVienDKHoc\\QLSinhvienDangkyHoc\\qlsinhviendangkyhoc\\formqlhocphan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{BF9B3EA6-73DC-40CE-9A08-6DD730F661E6}|QLSinhvienDangkyHoc\\QLSinhvienDangkyHoc.csproj|solutionrelative:qlsinhviendangkyhoc\\formqlhocphan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{BF9B3EA6-73DC-40CE-9A08-6DD730F661E6}|QLSinhvienDangkyHoc\\QLSinhvienDangkyHoc.csproj|d:\\maichi\\qlsinhviendkhoc\\qlsinhviendangkyhoc\\qlsinhviendangkyhoc\\formquenmk.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BF9B3EA6-73DC-40CE-9A08-6DD730F661E6}|QLSinhvienDangkyHoc\\QLSinhvienDangkyHoc.csproj|solutionrelative:qlsinhviendangkyhoc\\formquenmk.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -27,10 +31,6 @@
       "RelativeMoniker": "D:0:0:{BF9B3EA6-73DC-40CE-9A08-6DD730F661E6}|QLSinhvienDangkyHoc\\QLSinhvienDangkyHoc.csproj|solutionrelative:qlsinhviendangkyhoc\\formqlhocphan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BF9B3EA6-73DC-40CE-9A08-6DD730F661E6}|QLSinhvienDangkyHoc\\QLSinhvienDangkyHoc.csproj|D:\\MaiChi\\QLSinhVienDKHoc\\QLSinhvienDangkyHoc\\qlsinhviendangkyhoc\\formqlhocphan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{BF9B3EA6-73DC-40CE-9A08-6DD730F661E6}|QLSinhvienDangkyHoc\\QLSinhvienDangkyHoc.csproj|solutionrelative:qlsinhviendangkyhoc\\formqlhocphan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{BF9B3EA6-73DC-40CE-9A08-6DD730F661E6}|QLSinhvienDangkyHoc\\QLSinhvienDangkyHoc.csproj|D:\\MaiChi\\QLSinhVienDKHoc\\QLSinhvienDangkyHoc\\qlsinhviendangkyhoc\\formthemthucong.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BF9B3EA6-73DC-40CE-9A08-6DD730F661E6}|QLSinhvienDangkyHoc\\QLSinhvienDangkyHoc.csproj|solutionrelative:qlsinhviendangkyhoc\\formthemthucong.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -50,24 +50,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "FormQuenMK.cs",
               "DocumentMoniker": "D:\\MaiChi\\QLSinhVienDKHoc\\QLSinhvienDangkyHoc\\QLSinhvienDangkyHoc\\FormQuenMK.cs",
               "RelativeDocumentMoniker": "QLSinhvienDangkyHoc\\FormQuenMK.cs",
               "ToolTip": "D:\\MaiChi\\QLSinhVienDKHoc\\QLSinhvienDangkyHoc\\QLSinhvienDangkyHoc\\FormQuenMK.cs",
               "RelativeToolTip": "QLSinhvienDangkyHoc\\FormQuenMK.cs",
-              "ViewState": "AgIAAP4AAAAAAAAAAAAvwAkBAAAbAAAAAAAAAA==",
+              "ViewState": "AgIAAJQAAAAAAAAAAAAnwAkBAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-17T17:32:43.605Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "FormDangNhap.cs",
               "DocumentMoniker": "D:\\MaiChi\\QLSinhVienDKHoc\\QLSinhvienDangkyHoc\\QLSinhvienDangkyHoc\\FormDangNhap.cs",
               "RelativeDocumentMoniker": "QLSinhvienDangkyHoc\\FormDangNhap.cs",
@@ -79,18 +79,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 0,
               "Title": "FormQLHocPhan.cs [Design]",
               "DocumentMoniker": "D:\\MaiChi\\QLSinhVienDKHoc\\QLSinhvienDangkyHoc\\QLSinhvienDangkyHoc\\FormQLHocPhan.cs",
               "RelativeDocumentMoniker": "QLSinhvienDangkyHoc\\FormQLHocPhan.cs",
-              "ToolTip": "D:\\MaiChi\\QLSinhvienDangkyHoc\\QLSinhvienDangkyHoc\\FormQLHocPhan.cs [Design]",
-              "RelativeToolTip": "..\\..\\QLSinhvienDangkyHoc\\QLSinhvienDangkyHoc\\FormQLHocPhan.cs [Design]",
+              "ToolTip": "D:\\MaiChi\\QLSinhVienDKHoc\\QLSinhvienDangkyHoc\\QLSinhvienDangkyHoc\\FormQLHocPhan.cs [Design]",
+              "RelativeToolTip": "QLSinhvienDangkyHoc\\FormQLHocPhan.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-15T16:57:40.7Z"
+              "WhenOpened": "2026-03-15T16:57:40.7Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\MaiChi\\QLSinhVienDKHoc\\QLSinhvienDangkyHoc\\QLSinhvienDangkyHoc\\Program.cs",
               "RelativeDocumentMoniker": "QLSinhvienDangkyHoc\\Program.cs",
@@ -102,7 +103,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "FormQuenMK.cs [Design]",
               "DocumentMoniker": "D:\\MaiChi\\QLSinhVienDKHoc\\QLSinhvienDangkyHoc\\QLSinhvienDangkyHoc\\FormQuenMK.cs",
               "RelativeDocumentMoniker": "QLSinhvienDangkyHoc\\FormQuenMK.cs",
@@ -113,7 +114,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "FormDangNhap.cs [Design]",
               "DocumentMoniker": "D:\\MaiChi\\QLSinhVienDKHoc\\QLSinhvienDangkyHoc\\QLSinhvienDangkyHoc\\FormDangNhap.cs",
               "RelativeDocumentMoniker": "QLSinhvienDangkyHoc\\FormDangNhap.cs",
@@ -124,7 +125,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "FormQLHocPhan.cs",
               "DocumentMoniker": "D:\\MaiChi\\QLSinhVienDKHoc\\QLSinhvienDangkyHoc\\QLSinhvienDangkyHoc\\FormQLHocPhan.cs",
               "RelativeDocumentMoniker": "QLSinhvienDangkyHoc\\FormQLHocPhan.cs",
@@ -132,7 +133,8 @@
               "RelativeToolTip": "QLSinhvienDangkyHoc\\FormQLHocPhan.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAABbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-15T17:49:14.665Z"
+              "WhenOpened": "2026-03-15T17:49:14.665Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
