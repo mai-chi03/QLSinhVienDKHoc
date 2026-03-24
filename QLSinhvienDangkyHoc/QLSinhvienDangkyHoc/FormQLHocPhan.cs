@@ -8,189 +8,182 @@ namespace QLSinhvienDangkyHoc
 {
     public partial class FormQLHocPhan : Form
     {
-        // Chuỗi kết nối
         string connStr = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=QuanLyHocPhan;Integrated Security=True";
-
-        // --- Thành phần giao diện chi tiết ---
         Panel pnlChiTiet;
-        TextBox txtMaLop, txtTenMon, txtSoTinChi, txtThu, txtTiet, txtGioiHan, txtDaDangKy;
+
+        // Các nhãn hiển thị thông tin chi tiết
+        Label lblTenMon, lblMaMon, lblMaLop, lblGiaoVien, lblHeDaoTao, lblNgayBD, lblNgayKT, lblLichHoc;
 
         public FormQLHocPhan()
         {
             InitializeComponent();
-
-            // Khởi tạo Panel chi tiết
             TaoPanelChiTiet();
-
-            // Gán sự kiện CellClick cho DataGridView
-            dgvHocPhan.CellClick += dgvHocPhan_CellClick;
         }
 
-        private void FormQLHocPhan_Load(object sender, EventArgs e)
-        {
-            if (pnlChiTiet != null) pnlChiTiet.Visible = false; // ẩn ban đầu
-        }
-
-        // --- TẠO PANEL CHI TIẾT HIỆN ĐẠI ---
         private void TaoPanelChiTiet()
         {
-            // Panel chính
-            pnlChiTiet = new Panel();
-            pnlChiTiet.Dock = DockStyle.Fill;
-            pnlChiTiet.BackColor = Color.White;
-            pnlChiTiet.Font = new Font("Calibri", 11); // font toàn bộ Panel
+            // 1. Khởi tạo Panel nền trắng
+            pnlChiTiet = new Panel
+            {
+                Dock = DockStyle.Fill,
+                BackColor = Color.White,
+                Padding = new Padding(20) // Tạo khoảng đệm nội bộ cho panel
+            };
             panel3.Controls.Add(pnlChiTiet);
             pnlChiTiet.BringToFront();
 
-            // Header
-            Label lblHeader = new Label();
-            lblHeader.Text = "THÔNG TIN CHI TIẾT";
-            lblHeader.Dock = DockStyle.Top;
-            lblHeader.Height = 50;
-            lblHeader.TextAlign = ContentAlignment.MiddleCenter;
-            lblHeader.BackColor = Color.FromArgb(52, 152, 219); // xanh đẹp
-            lblHeader.ForeColor = Color.White;
-            lblHeader.Font = new Font("Calibri", 12, FontStyle.Bold);
-            pnlChiTiet.Controls.Add(lblHeader);
-
-            // Panel con chứa các TextBox và Label
-            Panel pnlContent = new Panel();
-            pnlContent.Dock = DockStyle.Fill;
-            pnlContent.Padding = new Padding(20);
-            pnlChiTiet.Controls.Add(pnlContent);
-            pnlContent.BringToFront();
-
-            int currentTop = 20;
-
-            // Hàm tạo Label hiện đại
-            Label TaoLabelHienDai(string text, int y)
+            // 2. Tiêu đề "Thông tin chi tiết"
+            Label lblMainTitle = new Label
             {
-                Label lbl = new Label();
-                lbl.Text = text;
-                lbl.Left = 20;
-                lbl.Top = y;
-                lbl.AutoSize = true;
-                lbl.ForeColor = Color.Black;
-                lbl.Font = new Font("Calibri", 10, FontStyle.Bold);
-                return lbl;
-            }
+                Text = "Thông tin chi tiết",
+                Location = new Point(25, 20),
+                AutoSize = true,
+                Font = new Font("Segoe UI", 13, FontStyle.Bold),
+                ForeColor = Color.FromArgb(64, 64, 64)
+            };
+            pnlChiTiet.Controls.Add(lblMainTitle);
 
-            // Hàm tạo TextBox hiện đại
-            TextBox TaoTextBoxHienDai(int y, int width = 250)
+            int top = 75;
+            int labelX = 30;
+            int valueX = 145;
+
+            // Hàm tạo tiêu đề mục (Bên trái, Bold)
+            Label TaoTieuDe(string t, int y) => new Label
             {
-                TextBox txt = new TextBox();
-                txt.Left = 20;
-                txt.Top = y + 20;
-                txt.Width = width;
-                txt.ReadOnly = true;
-                txt.BorderStyle = BorderStyle.None;
-                txt.BackColor = Color.FromArgb(240, 240, 240);
-                txt.Font = new Font("Calibri", 11, FontStyle.Regular);
-                return txt;
-            }
+                Text = t,
+                Left = labelX,
+                Top = y,
+                AutoSize = true,
+                ForeColor = Color.FromArgb(44, 62, 80),
+                Font = new Font("Segoe UI", 9, FontStyle.Bold)
+            };
 
-            // --- Thêm các trường ---
-            pnlContent.Controls.Add(TaoLabelHienDai("Mã lớp học", currentTop));
-            txtMaLop = TaoTextBoxHienDai(currentTop, 150);
-            pnlContent.Controls.Add(txtMaLop);
+            // Hàm tạo nội dung (Bên phải, Chữ đen, Căn lề phải)
+            Label TaoGiaTri(int y) => new Label
+            {
+                Text = "...",
+                Left = valueX,
+                Top = y,
+                Width = 180,
+                ForeColor = Color.Black,
+                Font = new Font("Segoe UI", 9, FontStyle.Regular),
+                TextAlign = ContentAlignment.TopRight
+            };
 
-            currentTop += 65;
-            pnlContent.Controls.Add(TaoLabelHienDai("Tên môn học", currentTop));
-            txtTenMon = TaoTextBoxHienDai(currentTop, 150);
-            pnlContent.Controls.Add(txtTenMon);
+            // 3. Danh sách thông tin hiển thị
+            pnlChiTiet.Controls.Add(TaoTieuDe("Môn học:", top)); lblTenMon = TaoGiaTri(top); pnlChiTiet.Controls.Add(lblTenMon); top += 35;
+            pnlChiTiet.Controls.Add(TaoTieuDe("Mã môn học:", top)); lblMaMon = TaoGiaTri(top); pnlChiTiet.Controls.Add(lblMaMon); top += 35;
+            pnlChiTiet.Controls.Add(TaoTieuDe("Mã lớp học:", top)); lblMaLop = TaoGiaTri(top); pnlChiTiet.Controls.Add(lblMaLop); top += 35;
+            pnlChiTiet.Controls.Add(TaoTieuDe("Giáo viên:", top)); lblGiaoVien = TaoGiaTri(top); lblGiaoVien.Text = "Chưa có"; pnlChiTiet.Controls.Add(lblGiaoVien); top += 35;
+            pnlChiTiet.Controls.Add(TaoTieuDe("Hệ đào tạo:", top)); lblHeDaoTao = TaoGiaTri(top); lblHeDaoTao.Text = "Cử nhân tài năng"; pnlChiTiet.Controls.Add(lblHeDaoTao); top += 35;
+            pnlChiTiet.Controls.Add(TaoTieuDe("Ngày bắt đầu:", top)); lblNgayBD = TaoGiaTri(top); lblNgayBD.Text = "01/01/2026"; pnlChiTiet.Controls.Add(lblNgayBD); top += 35;
+            pnlChiTiet.Controls.Add(TaoTieuDe("Ngày kết thúc:", top)); lblNgayKT = TaoGiaTri(top); lblNgayKT.Text = "31/12/2026"; pnlChiTiet.Controls.Add(lblNgayKT); top += 35;
+            pnlChiTiet.Controls.Add(TaoTieuDe("Lịch học:", top)); lblLichHoc = TaoGiaTri(top); pnlChiTiet.Controls.Add(lblLichHoc);
 
-            currentTop += 65;
-            pnlContent.Controls.Add(TaoLabelHienDai("Số tín chỉ", currentTop));
-            txtSoTinChi = TaoTextBoxHienDai(currentTop, 100);
-            pnlContent.Controls.Add(txtSoTinChi);
+            // 4. Thiết lập các nút bấm KHÔNG DÍNH VIỀN
+            int btnW = 100;
+            int btnH = 35;
+            int spacing = 15;
+            int bottomMargin = 30; // Khoảng cách an toàn so với đáy panel
 
-            currentTop += 65;
-            pnlContent.Controls.Add(TaoLabelHienDai("Thứ / Tiết học", currentTop));
-            txtThu = TaoTextBoxHienDai(currentTop, 100 );
-            pnlContent.Controls.Add(txtThu);
+            // Căn giữa 2 nút dựa trên chiều rộng panel
+            int startX = (panel3.Width - (btnW * 2 + spacing)) / 2;
+            int startY = panel3.Height - btnH - bottomMargin; // Tự động đẩy lên cách viền dưới
 
-            txtTiet = TaoTextBoxHienDai(currentTop, 100);
-            txtTiet.Left = 110;
-            pnlContent.Controls.Add(txtTiet);
+            Button btnXoa_UI = new Button
+            {
+                Text = "Xóa",
+                Size = new Size(btnW, btnH),
+                Location = new Point(startX, startY),
+                BackColor = Color.FromArgb(189, 189, 189),
+                ForeColor = Color.White,
+                FlatStyle = FlatStyle.Flat,
+                Font = new Font("Segoe UI", 9, FontStyle.Bold),
+                Cursor = Cursors.Hand
+            };
 
-            currentTop += 65;
-            pnlContent.Controls.Add(TaoLabelHienDai("Giới hạn sinh viên", currentTop));
-            txtGioiHan = TaoTextBoxHienDai(currentTop, 100);
-            pnlContent.Controls.Add(txtGioiHan);
+            Button btnSua_UI = new Button
+            {
+                Text = "Sửa",
+                Size = new Size(btnW, btnH),
+                Location = new Point(startX + btnW + spacing, startY),
+                BackColor = Color.FromArgb(63, 81, 181),
+                ForeColor = Color.White,
+                FlatStyle = FlatStyle.Flat,
+                Font = new Font("Segoe UI", 9, FontStyle.Bold),
+                Cursor = Cursors.Hand
+            };
 
-            currentTop += 65;
-            pnlContent.Controls.Add(TaoLabelHienDai("Số lượng đã đăng ký", currentTop));
-            txtDaDangKy = TaoTextBoxHienDai(currentTop, 100);
-            txtDaDangKy.ForeColor = Color.FromArgb(41, 128, 185);
-            txtDaDangKy.Font = new Font("Calibri", 11, FontStyle.Bold);
-            pnlContent.Controls.Add(txtDaDangKy);
+            // Gán sự kiện cho nút bấm
+            btnSua_UI.Click += (s, ev) => moFormSua();
+            btnXoa_UI.Click += (s, ev) => {
+                if (dgvHocPhan.CurrentRow != null && MessageBox.Show("Xóa lớp học này?", "Xác nhận", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                    dgvHocPhan.Rows.Remove(dgvHocPhan.CurrentRow);
+            };
+
+            pnlChiTiet.Controls.Add(btnXoa_UI);
+            pnlChiTiet.Controls.Add(btnSua_UI);
         }
 
-        // --- Xử lý khi chọn dòng trong DataGridView ---
-        private void dgvHocPhan_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (e.RowIndex < 0) return;
-
-            // Ẩn các control khác trừ Panel chi tiết
-            foreach (Control ctrl in panel3.Controls)
-            {
-                if (ctrl != pnlChiTiet) ctrl.Visible = false;
-            }
-
-            pnlChiTiet.Visible = true;
-
-            // Đổ dữ liệu
-            DataGridViewRow row = dgvHocPhan.Rows[e.RowIndex];
-            txtMaLop.Text = row.Cells[1].Value?.ToString();
-            txtTenMon.Text = row.Cells[2].Value?.ToString();
-            txtSoTinChi.Text = row.Cells[3].Value?.ToString();
-            txtThu.Text = row.Cells[4].Value?.ToString();
-            txtTiet.Text = row.Cells[5].Value?.ToString();
-            txtGioiHan.Text = row.Cells[6].Value?.ToString();
-            txtDaDangKy.Text = row.Cells[7].Value?.ToString();
-        }
-
-        // --- Các hàm stub để tránh lỗi build ---
-        private void label7_Click(object sender, EventArgs e) { }
-        private void panel1_Paint(object sender, PaintEventArgs e) { }
-
-        // --- Logic khác ---
-        public void ThemDongVaoDGV(string maLop, string tenMonHoc, string soTinChi, string thu, string tiet, string gioiHan, string daDangKy)
-        {
-            dgvHocPhan.Rows.Add(false, maLop, tenMonHoc, soTinChi, thu, tiet, gioiHan, daDangKy);
-        }
+        // --- XỬ LÝ SỰ KIỆN ---
 
         private void btnThemThuCong_Click(object sender, EventArgs e)
         {
-            FormThemThuCong f = new FormThemThuCong(this);
+            FormThemThuCong f = new FormThemThuCong(this); // Đã kích hoạt lệnh mở form
             f.ShowDialog();
         }
 
-        private void btnXoaCacLop_Click(object sender, EventArgs e )
+        private void moFormSua()
         {
-            DialogResult kq = MessageBox.Show("Xác nhận xóa?", "Thông báo", MessageBoxButtons.YesNo);
-            if (kq == DialogResult.No) return;
-
-            for (int i = dgvHocPhan.Rows.Count - 1; i >= 0; i--)
+            if (dgvHocPhan.CurrentRow != null)
             {
-                if (Convert.ToBoolean(dgvHocPhan.Rows[i].Cells[0].Value) ==true)
-                    dgvHocPhan.Rows.RemoveAt(i);
+                var r = dgvHocPhan.CurrentRow;
+                FormSuaHocPhan fSua = new FormSuaHocPhan(
+                    r.Cells[2].Value.ToString(), r.Cells[3].Value.ToString(),
+                    r.Cells[4].Value.ToString(), r.Cells[5].Value.ToString(),
+                    r.Cells[6].Value.ToString(), r.Cells[7].Value.ToString());
+
+                if (fSua.ShowDialog() == DialogResult.OK)
+                {
+                    r.Cells[2].Value = fSua.TenMon;
+                    r.Cells[3].Value = fSua.SoTinChi;
+                    r.Cells[4].Value = fSua.Thu;
+                    r.Cells[5].Value = fSua.Tiet;
+                    r.Cells[6].Value = fSua.GioiHan;
+                    CapNhatPanelChiTiet(r);
+                }
             }
-            KiemTraNutXoa();
         }
 
-        private void KiemTraNutXoa()
+        private void CapNhatPanelChiTiet(DataGridViewRow r)
         {
-            bool coChon = dgvHocPhan.Rows.Cast<DataGridViewRow>().Any(r => Convert.ToBoolean(r.Cells[0].Value));
-            btnXoaCacLop.Enabled = coChon;
-            btnXoaCacLop.BackColor = coChon ? Color.Red : Color.LightGray;
+            lblTenMon.Text = r.Cells[2].Value?.ToString();
+            lblMaLop.Text = r.Cells[1].Value?.ToString();
+            lblMaMon.Text = r.Cells[1].Value?.ToString().Split('.')[0];
+            lblLichHoc.Text = $"{r.Cells[4].Value}, Tiết {r.Cells[5].Value}";
         }
 
-        private void dgvHocPhan_CellValueChanged(object sender, DataGridViewCellEventArgs e) { KiemTraNutXoa(); }
+        private void dgvHocPhan_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex < 0) return;
+            pnlChiTiet.Visible = true;
+            CapNhatPanelChiTiet(dgvHocPhan.Rows[e.RowIndex]);
+        }
+
+        // --- HÀM HỖ TRỢ VÀ FIX LỖI DESIGNER ---
+        private void FormQLHocPhan_Load(object sender, EventArgs e) { if (pnlChiTiet != null) pnlChiTiet.Visible = false; }
+        private void btnXoaCacLop_Click(object sender, EventArgs e) { }
+        private void btnTaoHocKy_Click(object sender, EventArgs e) { }
+        private void label7_Click(object sender, EventArgs e) { }
+        private void dgvHocPhan_CellValueChanged(object sender, DataGridViewCellEventArgs e) { }
         private void dgvHocPhan_CurrentCellDirtyStateChanged(object sender, EventArgs e)
         {
             if (dgvHocPhan.IsCurrentCellDirty) dgvHocPhan.CommitEdit(DataGridViewDataErrorContexts.Commit);
         }
-        private void btnTaoHocKy_Click(object sender, EventArgs e) { pnlTaoHocKy.Visible = !pnlTaoHocKy.Visible; }
+
+        public void ThemDongVaoDGV(string ma, string ten, string tin, string thu, string tiet, string gh, string dk)
+        {
+            dgvHocPhan.Rows.Add(false, ma, ten, tin, thu, tiet, gh, dk); //
+        }
     }
 }

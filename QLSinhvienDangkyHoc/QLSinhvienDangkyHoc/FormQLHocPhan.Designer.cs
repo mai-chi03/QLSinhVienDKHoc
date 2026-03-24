@@ -85,7 +85,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1581, 100);
             this.panel1.TabIndex = 0;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // label1
             // 
@@ -196,7 +195,7 @@
             this.panel3.Controls.Add(this.lblThongBao);
             this.panel3.Location = new System.Drawing.Point(1260, 106);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(321, 602);
+            this.panel3.Size = new System.Drawing.Size(500, 700);
             this.panel3.TabIndex = 2;
             // 
             // lblThongBao
@@ -335,7 +334,7 @@
             // 
             this.textBox2.Location = new System.Drawing.Point(22, 138);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(165, 26);
+            this.textBox2.Size = new System.Drawing.Size(60, 26);
             this.textBox2.TabIndex = 17;
             // 
             // label5
