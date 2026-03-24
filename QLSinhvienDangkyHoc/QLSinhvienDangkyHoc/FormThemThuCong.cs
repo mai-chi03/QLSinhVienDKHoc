@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace QLSinhvienDangkyHoc
@@ -14,74 +8,112 @@ namespace QLSinhvienDangkyHoc
     {
         string connStr = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=QuanLyHocPhan;Integrated Security=True";
         FormQLHocPhan frmCha;
+
+        // Constructor nhận Form Cha
         public FormThemThuCong(FormQLHocPhan f)
         {
             InitializeComponent();
             frmCha = f;
         }
 
-        private void FormThemThuCong_Load(object sender, EventArgs e)
+        // Constructor mặc định (Phòng trường hợp gọi sai cách)
+        public FormThemThuCong()
         {
-
+            InitializeComponent();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void FormThemThuCong_Load(object sender, EventArgs e)
         {
-            this.Close();
+            txtMaLopMonHoc.Text = "";
+            txtMaLopMonHoc.ForeColor = Color.Black; // Chữ 'a' khi gõ màu đen
+
+            // Cấu hình nhãn "Mã lớp môn học" màu đen chuẩn
+            label9.Text = "Mã lớp môn học";
+            label9.ForeColor = Color.Black;
+            label9.BackColor = Color.Transparent;
+            label9.Font = new Font("Segoe UI", 10, FontStyle.Regular);
+
+            // Vị trí ban đầu: Placeholder trong ô
+            label9.Left = txtMaLopMonHoc.Left + 5;
+            label9.Top = txtMaLopMonHoc.Top + 5;
+
+            label9.BringToFront();
+            label9.Click += (s, ev) => { txtMaLopMonHoc.Focus(); };
+
+            // Đăng ký sự kiện (nếu trong Designer chưa có)
+            txtMaLopMonHoc.TextChanged += TxtMaLopMonHoc_TextChanged;
+            txtMaLopMonHoc.Enter += TxtMaLopMonHoc_Enter;
+            txtMaLopMonHoc.Leave += TxtMaLopMonHoc_Leave;
+        }
+
+        private void TxtMaLopMonHoc_TextChanged(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(txtMaLopMonHoc.Text))
+            {
+                // Khi có chữ: Bay lên và thẳng hàng với Sĩ Số
+                label9.Top = txtMaLopMonHoc.Top - 20;
+                label9.Left = txtMaLopMonHoc.Left;
+                label9.Font = new Font("Segoe UI", 9, FontStyle.Regular);
+                label9.ForeColor = Color.Black;
+            }
+        }
+
+        private void TxtMaLopMonHoc_Enter(object sender, EventArgs e)
+        {
+            label9.Top = txtMaLopMonHoc.Top - 20;
+            label9.Left = txtMaLopMonHoc.Left;
+            label9.ForeColor = Color.Black;
+        }
+
+        private void TxtMaLopMonHoc_Leave(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(txtMaLopMonHoc.Text))
+            {
+                label9.Top = txtMaLopMonHoc.Top + 5;
+                label9.Left = txtMaLopMonHoc.Left + 5;
+                label9.Font = new Font("Segoe UI", 10, FontStyle.Regular);
+                label9.ForeColor = Color.Black;
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string maLop = txtMaLopMonHoc.Text;
+            string maLop = txtMaLopMonHoc.Text.Trim();
             string tenMonHoc = cboMonHoc.Text;
             string thu = cboThu.Text;
             string tiet = txtTiet.Text.Trim();
             string gioiHan = txtSiSo.Text.Trim();
-
             string soTinChi = "";
             string daDangKy = "0";
 
-            if (tenMonHoc == "")
+            // Validate dữ liệu
+            if (string.IsNullOrEmpty(maLop)) { MessageBox.Show("Nhập mã lớp!"); return; }
+            if (tenMonHoc == "") { MessageBox.Show("Chọn môn học!"); return; }
+
+            switch (tenMonHoc)
             {
-                MessageBox.Show("Vui lòng chọn môn học!");
-                return;
+                case "Trí tuệ nhân tạo": soTinChi = "3"; break;
+                case "Lập trình C#": soTinChi = "3"; break;
+                case "Cơ sở dữ liệu": soTinChi = "3"; break;
+                case "Mạng máy tính": soTinChi = "2"; break;
+                default: soTinChi = "3"; break;
             }
 
-            if (thu == "")
+            // --- FIX LỖI NULL TẠI ĐÂY ---
+            if (frmCha != null)
             {
-                MessageBox.Show("Vui lòng chọn thứ!");
-                return;
+                frmCha.ThemDongVaoDGV(maLop, tenMonHoc, soTinChi, thu, tiet, gioiHan, daDangKy);
+                MessageBox.Show("Thêm lớp học thành công!");
+                this.Close();
             }
-
-            if (tiet == "")
-            {
-                MessageBox.Show("Vui lòng nhập tiết!");
-                txtTiet.Focus();
-                return;
-            }
-
-            if (gioiHan == "")
-            {
-                MessageBox.Show("Vui lòng nhập sĩ số tối đa!");
-                txtSiSo.Focus();
-                return;
-            }
-
-            // Gán số tín chỉ theo môn học
-            if (tenMonHoc == "Trí tuệ nhân tạo")
-                soTinChi = "3";
-            else if (tenMonHoc == "Lập trình C#")
-                soTinChi = "3";
-            else if (tenMonHoc == "Cơ sở dữ liệu")
-                soTinChi = "3";
-            else if (tenMonHoc == "Mạng máy tính")
-                soTinChi = "2";
             else
-                soTinChi = "3";
+            {
+                MessageBox.Show("Lỗi hệ thống: Không tìm thấy Form chính để cập nhật!");
+            }
+        }
 
-            frmCha.ThemDongVaoDGV(maLop, tenMonHoc, soTinChi, thu, tiet, gioiHan, daDangKy);
-
-            MessageBox.Show("Thêm lớp học thành công!");
+        private void button2_Click(object sender, EventArgs e)
+        {
             this.Close();
         }
     }
