@@ -1,0 +1,182 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Users\\HP\\Documents\\GitHub\\QLSinhVienDKHoc\\QLSinhvienDangkyHoc\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{BF9B3EA6-73DC-40CE-9A08-6DD730F661E6}|QLSinhvienDangkyHoc\\QLSinhvienDangkyHoc.csproj|D:\\Users\\HP\\Documents\\GitHub\\QLSinhVienDKHoc\\QLSinhvienDangkyHoc\\qlsinhviendangkyhoc\\formthemthucong.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BF9B3EA6-73DC-40CE-9A08-6DD730F661E6}|QLSinhvienDangkyHoc\\QLSinhvienDangkyHoc.csproj|solutionrelative:qlsinhviendangkyhoc\\formthemthucong.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BF9B3EA6-73DC-40CE-9A08-6DD730F661E6}|QLSinhvienDangkyHoc\\QLSinhvienDangkyHoc.csproj|D:\\Users\\HP\\Documents\\GitHub\\QLSinhVienDKHoc\\QLSinhvienDangkyHoc\\qlsinhviendangkyhoc\\formthemthucong.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{BF9B3EA6-73DC-40CE-9A08-6DD730F661E6}|QLSinhvienDangkyHoc\\QLSinhvienDangkyHoc.csproj|solutionrelative:qlsinhviendangkyhoc\\formthemthucong.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BF9B3EA6-73DC-40CE-9A08-6DD730F661E6}|QLSinhvienDangkyHoc\\QLSinhvienDangkyHoc.csproj|D:\\Users\\HP\\Documents\\GitHub\\QLSinhVienDKHoc\\QLSinhvienDangkyHoc\\qlsinhviendangkyhoc\\formqlhocphan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{BF9B3EA6-73DC-40CE-9A08-6DD730F661E6}|QLSinhvienDangkyHoc\\QLSinhvienDangkyHoc.csproj|solutionrelative:qlsinhviendangkyhoc\\formqlhocphan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BF9B3EA6-73DC-40CE-9A08-6DD730F661E6}|QLSinhvienDangkyHoc\\QLSinhvienDangkyHoc.csproj|D:\\Users\\HP\\Documents\\GitHub\\QLSinhVienDKHoc\\QLSinhvienDangkyHoc\\qlsinhviendangkyhoc\\formqlhocphan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BF9B3EA6-73DC-40CE-9A08-6DD730F661E6}|QLSinhvienDangkyHoc\\QLSinhvienDangkyHoc.csproj|solutionrelative:qlsinhviendangkyhoc\\formqlhocphan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BF9B3EA6-73DC-40CE-9A08-6DD730F661E6}|QLSinhvienDangkyHoc\\QLSinhvienDangkyHoc.csproj|D:\\Users\\HP\\Documents\\GitHub\\QLSinhVienDKHoc\\QLSinhvienDangkyHoc\\qlsinhviendangkyhoc\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BF9B3EA6-73DC-40CE-9A08-6DD730F661E6}|QLSinhvienDangkyHoc\\QLSinhvienDangkyHoc.csproj|solutionrelative:qlsinhviendangkyhoc\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BF9B3EA6-73DC-40CE-9A08-6DD730F661E6}|QLSinhvienDangkyHoc\\QLSinhvienDangkyHoc.csproj|d:\\users\\hp\\documents\\github\\qlsinhviendkhoc\\qlsinhviendangkyhoc\\qlsinhviendangkyhoc\\formquenmk.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BF9B3EA6-73DC-40CE-9A08-6DD730F661E6}|QLSinhvienDangkyHoc\\QLSinhvienDangkyHoc.csproj|solutionrelative:qlsinhviendangkyhoc\\formquenmk.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BF9B3EA6-73DC-40CE-9A08-6DD730F661E6}|QLSinhvienDangkyHoc\\QLSinhvienDangkyHoc.csproj|D:\\Users\\HP\\Documents\\GitHub\\QLSinhVienDKHoc\\QLSinhvienDangkyHoc\\qlsinhviendangkyhoc\\formquenmk.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{BF9B3EA6-73DC-40CE-9A08-6DD730F661E6}|QLSinhvienDangkyHoc\\QLSinhvienDangkyHoc.csproj|solutionrelative:qlsinhviendangkyhoc\\formquenmk.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BF9B3EA6-73DC-40CE-9A08-6DD730F661E6}|QLSinhvienDangkyHoc\\QLSinhvienDangkyHoc.csproj|D:\\Users\\HP\\Documents\\GitHub\\QLSinhVienDKHoc\\QLSinhvienDangkyHoc\\qlsinhviendangkyhoc\\formdangnhap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BF9B3EA6-73DC-40CE-9A08-6DD730F661E6}|QLSinhvienDangkyHoc\\QLSinhvienDangkyHoc.csproj|solutionrelative:qlsinhviendangkyhoc\\formdangnhap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BF9B3EA6-73DC-40CE-9A08-6DD730F661E6}|QLSinhvienDangkyHoc\\QLSinhvienDangkyHoc.csproj|D:\\Users\\HP\\Documents\\GitHub\\QLSinhVienDKHoc\\QLSinhvienDangkyHoc\\qlsinhviendangkyhoc\\formdangnhap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{BF9B3EA6-73DC-40CE-9A08-6DD730F661E6}|QLSinhvienDangkyHoc\\QLSinhvienDangkyHoc.csproj|solutionrelative:qlsinhviendangkyhoc\\formdangnhap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BF9B3EA6-73DC-40CE-9A08-6DD730F661E6}|QLSinhvienDangkyHoc\\QLSinhvienDangkyHoc.csproj|D:\\Users\\HP\\Documents\\GitHub\\QLSinhVienDKHoc\\QLSinhvienDangkyHoc\\qlsinhviendangkyhoc\\formdangnhap.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BF9B3EA6-73DC-40CE-9A08-6DD730F661E6}|QLSinhvienDangkyHoc\\QLSinhvienDangkyHoc.csproj|solutionrelative:qlsinhviendangkyhoc\\formdangnhap.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Users\\HP\\Documents\\GitHub\\QLSinhVienDKHoc\\QLSinhvienDangkyHoc\\QLSinhvienDangkyHoc\\Program.cs",
+              "RelativeDocumentMoniker": "QLSinhvienDangkyHoc\\Program.cs",
+              "ToolTip": "D:\\Users\\HP\\Documents\\GitHub\\QLSinhVienDKHoc\\QLSinhvienDangkyHoc\\QLSinhvienDangkyHoc\\Program.cs",
+              "RelativeToolTip": "QLSinhvienDangkyHoc\\Program.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAwwBIAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-15T17:57:48.041Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "FormThemThuCong.cs",
+              "DocumentMoniker": "D:\\Users\\HP\\Documents\\GitHub\\QLSinhVienDKHoc\\QLSinhvienDangkyHoc\\QLSinhvienDangkyHoc\\FormThemThuCong.cs",
+              "RelativeDocumentMoniker": "QLSinhvienDangkyHoc\\FormThemThuCong.cs",
+              "ToolTip": "D:\\Users\\HP\\Documents\\GitHub\\QLSinhVienDKHoc\\QLSinhvienDangkyHoc\\QLSinhvienDangkyHoc\\FormThemThuCong.cs",
+              "RelativeToolTip": "QLSinhvienDangkyHoc\\FormThemThuCong.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAD4AAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-15T18:23:40.719Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "FormQLHocPhan.cs [Design]",
+              "DocumentMoniker": "D:\\Users\\HP\\Documents\\GitHub\\QLSinhVienDKHoc\\QLSinhvienDangkyHoc\\QLSinhvienDangkyHoc\\FormQLHocPhan.cs",
+              "RelativeDocumentMoniker": "QLSinhvienDangkyHoc\\FormQLHocPhan.cs",
+              "ToolTip": "D:\\Users\\HP\\Documents\\GitHub\\QLSinhVienDKHoc\\QLSinhvienDangkyHoc\\QLSinhvienDangkyHoc\\FormQLHocPhan.cs [Design]",
+              "RelativeToolTip": "QLSinhvienDangkyHoc\\FormQLHocPhan.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-15T16:57:40.7Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "FormQLHocPhan.cs",
+              "DocumentMoniker": "D:\\Users\\HP\\Documents\\GitHub\\QLSinhVienDKHoc\\QLSinhvienDangkyHoc\\QLSinhvienDangkyHoc\\FormQLHocPhan.cs",
+              "RelativeDocumentMoniker": "QLSinhvienDangkyHoc\\FormQLHocPhan.cs",
+              "ToolTip": "D:\\Users\\HP\\Documents\\GitHub\\QLSinhVienDKHoc\\QLSinhvienDangkyHoc\\QLSinhvienDangkyHoc\\FormQLHocPhan.cs",
+              "RelativeToolTip": "QLSinhvienDangkyHoc\\FormQLHocPhan.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAIQAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-15T17:49:14.665Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "FormThemThuCong.cs [Design]",
+              "DocumentMoniker": "D:\\Users\\HP\\Documents\\GitHub\\QLSinhVienDKHoc\\QLSinhvienDangkyHoc\\QLSinhvienDangkyHoc\\FormThemThuCong.cs",
+              "RelativeDocumentMoniker": "QLSinhvienDangkyHoc\\FormThemThuCong.cs",
+              "ToolTip": "D:\\Users\\HP\\Documents\\GitHub\\QLSinhVienDKHoc\\QLSinhvienDangkyHoc\\QLSinhvienDangkyHoc\\FormThemThuCong.cs [Design]",
+              "RelativeToolTip": "QLSinhvienDangkyHoc\\FormThemThuCong.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-15T18:12:01.119Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "FormQuenMK.cs",
+              "DocumentMoniker": "D:\\Users\\HP\\Documents\\GitHub\\QLSinhVienDKHoc\\QLSinhvienDangkyHoc\\QLSinhvienDangkyHoc\\FormQuenMK.cs",
+              "RelativeDocumentMoniker": "QLSinhvienDangkyHoc\\FormQuenMK.cs",
+              "ToolTip": "D:\\Users\\HP\\Documents\\GitHub\\QLSinhVienDKHoc\\QLSinhvienDangkyHoc\\QLSinhvienDangkyHoc\\FormQuenMK.cs",
+              "RelativeToolTip": "QLSinhvienDangkyHoc\\FormQuenMK.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkBAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-17T17:32:43.605Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "FormDangNhap.cs",
+              "DocumentMoniker": "D:\\Users\\HP\\Documents\\GitHub\\QLSinhVienDKHoc\\QLSinhvienDangkyHoc\\QLSinhvienDangkyHoc\\FormDangNhap.cs",
+              "RelativeDocumentMoniker": "QLSinhvienDangkyHoc\\FormDangNhap.cs",
+              "ToolTip": "D:\\Users\\HP\\Documents\\GitHub\\QLSinhVienDKHoc\\QLSinhvienDangkyHoc\\QLSinhvienDangkyHoc\\FormDangNhap.cs",
+              "RelativeToolTip": "QLSinhvienDangkyHoc\\FormDangNhap.cs",
+              "ViewState": "AgIAAEcAAAAAAAAAAAAwwEEAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-16T01:27:21.06Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "FormQuenMK.cs [Design]",
+              "DocumentMoniker": "D:\\Users\\HP\\Documents\\GitHub\\QLSinhVienDKHoc\\QLSinhvienDangkyHoc\\QLSinhvienDangkyHoc\\FormQuenMK.cs",
+              "RelativeDocumentMoniker": "QLSinhvienDangkyHoc\\FormQuenMK.cs",
+              "ToolTip": "D:\\MaiChi\\QLSinhvienDangkyHoc\\QLSinhvienDangkyHoc\\FormQuenMK.cs [Design]",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\MaiChi\\QLSinhvienDangkyHoc\\QLSinhvienDangkyHoc\\FormQuenMK.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-15T16:53:30.772Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "FormDangNhap.cs [Design]",
+              "DocumentMoniker": "D:\\Users\\HP\\Documents\\GitHub\\QLSinhVienDKHoc\\QLSinhvienDangkyHoc\\QLSinhvienDangkyHoc\\FormDangNhap.cs",
+              "RelativeDocumentMoniker": "QLSinhvienDangkyHoc\\FormDangNhap.cs",
+              "ToolTip": "D:\\MaiChi\\QLSinhvienDangkyHoc\\QLSinhvienDangkyHoc\\FormDangNhap.cs [Design]",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\MaiChi\\QLSinhvienDangkyHoc\\QLSinhvienDangkyHoc\\FormDangNhap.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-15T16:15:30.025Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "FormDangNhap.Designer.cs",
+              "DocumentMoniker": "D:\\Users\\HP\\Documents\\GitHub\\QLSinhVienDKHoc\\QLSinhvienDangkyHoc\\QLSinhvienDangkyHoc\\FormDangNhap.Designer.cs",
+              "RelativeDocumentMoniker": "QLSinhvienDangkyHoc\\FormDangNhap.Designer.cs",
+              "ToolTip": "D:\\Users\\HP\\Documents\\GitHub\\QLSinhVienDKHoc\\QLSinhvienDangkyHoc\\QLSinhvienDangkyHoc\\FormDangNhap.Designer.cs",
+              "RelativeToolTip": "QLSinhvienDangkyHoc\\FormDangNhap.Designer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-15T18:26:43.059Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -16,7 +16,11 @@ namespace QLSinhvienDangkyHoc
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+<<<<<<< Updated upstream
             Application.Run(new Form1());
+=======
+            Application.Run(new FormQLHocPhan());
+>>>>>>> Stashed changes
         }
     }
 }

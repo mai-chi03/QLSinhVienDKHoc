@@ -46,14 +46,44 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="FormDangNhap.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="FormDangNhap.Designer.cs">
+      <DependentUpon>FormDangNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormQLHocPhan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormQLHocPhan.Designer.cs">
+      <DependentUpon>FormQLHocPhan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormQuenMK.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormQuenMK.Designer.cs">
+      <DependentUpon>FormQuenMK.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormThemThuCong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormThemThuCong.Designer.cs">
+      <DependentUpon>FormThemThuCong.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormDangNhap.resx">
+      <DependentUpon>FormDangNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormQLHocPhan.resx">
+      <DependentUpon>FormQLHocPhan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormQuenMK.resx">
+      <DependentUpon>FormQuenMK.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormThemThuCong.resx">
+      <DependentUpon>FormThemThuCong.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
